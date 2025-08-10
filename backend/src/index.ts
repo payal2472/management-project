@@ -3,6 +3,8 @@ import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import session from "cookie-session";
 import { config } from "./config/app.config";
+import connectDatabase from "./config/database.config";
+import { errorHandler } from "./middlewares/errorHandler.middleware";
 
 const app = express();
 const BASE_PATH = config.BASE_PATH || '/';
@@ -38,10 +40,12 @@ app.get('/', (req, res) => {
     res.status(200).json({ message: "Hello Subscribe to the channel & share" });
   });
   
+  app.use(errorHandler);
 
 // Listen on specified port
-app.listen(config.PORT, () => {
+app.listen(config.PORT, async() => {
   console.log(
     `Server listening on port ${config.PORT} in ${config.NODE_ENV} mode`
   );
+  await connectDatabase();
 });
