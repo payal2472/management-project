@@ -25,7 +25,7 @@ export const errorHandler: ErrorRequestHandler = (
   console.error(`Error Occured on PATH: ${req.path} `, error);
 
   if (error instanceof SyntaxError) {
-    return res.status(HTTPSTATUS.BAD_REQUEST).json({
+    return res.status(400).json({
       message: "Invalid JSON format. Please check your request body.",
     });
   }
@@ -41,7 +41,7 @@ export const errorHandler: ErrorRequestHandler = (
     });
   }
 
-  return res.status(HTTPSTATUS.INTERNAL_SERVER_ERROR).json({
+  return res.status(500).json({
     message: "Internal Server Error",
     error: error?.message || "Unknow error occurred",
   });
