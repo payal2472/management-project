@@ -1,4 +1,5 @@
 import mongoose, { Document, Schema } from "mongoose";
+import { workspaceIdSchema } from "../validation/workspace.validation";
 
 export interface ProjectDocument extends Document {
   name: string;
