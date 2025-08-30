@@ -93,4 +93,3 @@ To get a local copy up and running, follow these simple steps.
 - `npm run preview`: Previews the production build.
 - `npm run lint`: Lints the client-side code.
 
-##
