@@ -8,7 +8,7 @@ const httpConfig = () => ({
     NO_CONTENT: 204,
 
     // Client error responses
-    //vgbhjk
+  
 
     BAD_REQUEST: 400,
     UNAUTHORIZED: 401,
