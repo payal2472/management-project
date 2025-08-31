@@ -93,3 +93,8 @@ To get a local copy up and running, follow these simple steps.
 - `npm run preview`: Previews the production build.
 - `npm run lint`: Lints the client-side code.
 
+# Project Title
+
+Here’s a screenshot of my project:
+
+![Screenshot](./assets/screenshot.png)
