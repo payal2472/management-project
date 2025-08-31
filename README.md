@@ -97,4 +97,3 @@ To get a local copy up and running, follow these simple steps.
 
 Here’s a screenshot of my project:
 
-![Screenshot](./assets/screenshot.png)
